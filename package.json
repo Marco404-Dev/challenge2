@@ -1,0 +1,1 @@
+{"name":"challenge-ciclo-sueno","version":"1.0.0","private":true,"description":"Comparación educativa de vecino más cercano y regresión lineal","scripts":{"test":"node --test tests/model.test.js","start":"node scripts/serve.js"},"engines":{"node":">=18"}}
