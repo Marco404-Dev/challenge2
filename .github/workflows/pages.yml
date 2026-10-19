@@ -18,15 +18,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: npm test
       - uses: actions/configure-pages@v5
       - name: Preparar archivos públicos
         run: |
           mkdir -p _site/assets _site/notebooks
-          cp index.html styles.css app.js model.js README.md _site/
+          cp index.html README.md _site/
           cp assets/moon.svg _site/assets/
           cp notebooks/Challenge_Marco_sueno.ipynb _site/notebooks/
           touch _site/.nojekyll
